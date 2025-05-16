@@ -1,0 +1,175 @@
+.hero {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 770px) {
+        display: block;
+    }
+
+    .desc {
+        width: 50%;
+
+        .sub-header {
+            text-transform: uppercase;
+            color: #DF6951;
+            font-family: 'Poppins', sans-serif;
+            font-size:  1rem;
+        }
+
+        .main-header {
+            font-family: 'Volkhov', serif;
+            color: #181E4B;
+            font-size: 3.8rem;
+            line-height: 4.3rem;
+            z-index: 1;
+
+            @media (max-width: 907px) {
+                font-size: 2.5rem;
+                line-height: 1;
+            }
+        }
+
+        .enjoy {
+            position: relative;
+
+            p {
+                display: inline;
+                z-index: 2;
+                position: relative; // For z-index to apply position needs to be anything other than static
+            }
+        }
+
+        .underline {
+            position: absolute;
+            width: 280px;
+            top: 57px;
+            right: -90px;
+            z-index: 1;
+
+            @media (max-width: 907px) { 
+                top: 38px;
+                width: 170px;
+                right: -50px;
+            }
+        }
+
+        .more-info {
+            color: #5E6282;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 30px;
+            font-size: 0.8rem;
+        }
+
+        .cta {
+            margin-top: 25px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+
+            .find-out-more-btn {
+                background-color: #F1A501;
+                color: white;
+                padding: 12px;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(241, 165, 1, 0.3);
+                transition: 0.3s;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 5px 15px rgba(241, 165, 1, 0.7);
+                }
+
+                &:active {
+                    transform: translateY(3px);
+                }
+            }
+
+            .demo {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .play-button {
+                    background-color: #DF6951;
+                    padding: 15px;
+                    border-radius: 50%;
+                    box-shadow: 0 5px 15px rgba(223, 105, 81, 0.3);
+                    transition: 0.3s;
+
+                    .play-button-triangle {
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: 5px solid transparent;
+                        border-top: 0;
+                        border-bottom: 10px solid white;
+                        transform: rotate(90deg);
+                    }
+
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 5px 15px rgba(223, 105, 81, 0.7);
+                    }
+
+                    &:active {
+                        transform: translateY(3px);
+                    }
+                }
+
+                p {
+                    margin-left: 12px;
+                    color: #686D77;
+                }
+            }
+        }
+
+        @media (max-width: 770px) {
+            width: 100%;
+        }
+
+        @media (max-width: 550px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .sub-header {
+                margin-bottom: 15px;
+            }
+
+            .cta {
+                justify-content: center;
+            }
+        }
+
+    }
+
+    .travelling-girl {
+        width: 50%;
+
+        @media (max-width: 770px) {
+            width: 100%;
+
+            img {
+                padding-top: 30px;
+            }
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+    }
+}

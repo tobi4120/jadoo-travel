@@ -1,0 +1,53 @@
+.App {
+    height: 100vh;
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    padding: 0px 100px;
+    background: radial-gradient(250px at -135px 130px, rgba(213, 174, 228, 0.8), transparent) no-repeat, 
+    url("../Decore.png") top right no-repeat;
+    background-size: 42%;
+    
+    max-width: 90rem;
+
+    @media(min-width: 91rem) {
+        -webkit-mask-image: linear-gradient(to left, transparent, black 10%);
+        mask-image: linear-gradient(to left, transparent, black 10%);
+        mask-mode: match-source;
+
+        background: url("../Decore.png") top right no-repeat;
+        background-size: 42%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    align-items: center;
+
+    padding-bottom: 60px;
+
+    & > div {
+        width: 100%;
+        //background-color: red;
+    }
+
+    @media (max-width: 770px) {
+        background: none;
+    }
+
+    @media (max-width: 600px) {
+        padding: 0 25px;
+        padding-bottom: 60px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

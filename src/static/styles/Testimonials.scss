@@ -1,0 +1,114 @@
+@import '../../static/styles/Mixins.scss';
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+
+    .testimonials-left {
+        flex-basis: 50%;
+
+        .testimonials-header {
+            @include category-header;
+        }
+
+        .testimonials-sub-header {
+            @include category-sub-header;
+        }
+    }
+
+    .testimonials-right {
+        flex-basis: 50%;
+
+        display: flex;
+        gap: 50px;
+
+        padding-top: 25px; // To accomodate for card img absolute top: -35px
+
+        .testimonial-cards {
+            flex: 1;
+            position: relative;
+            transform: translateY(50px); // Push cards down by 50px to accomodate for animation
+
+            .testimonial-card {
+                padding: 20px;
+                border-radius: 10px;
+                position: relative;
+                top: 0;
+    
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -35px;
+                    left: -35px;
+                }
+
+                .review {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-family: 'Poppins', sans-serif;
+                    color: #5E6282;
+                    font-size: 0.85rem;
+                    line-height: 2;
+                }
+
+                .name {
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                }
+            }
+
+            // .hidden {
+            //     img {
+            //         top: 0;
+            //         left: 0;
+            //     }
+            // }
+        }
+
+        .pagination {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #14183E;
+            font-size: 2rem;
+            gap: 15px;
+
+            .icon-up {
+                display: inline-flex;
+                transform: rotate(270deg);
+                cursor: pointer;
+            }
+
+            .icon-down {
+                display: inline-flex;
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        display: block;
+
+        .testimonials-left {
+            text-align: center;
+        }
+
+        .testimonials-right {
+            margin-left: 50px;
+            gap: 25px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .testimonials-right {
+            margin-left: 100px;
+        }
+    }
+}

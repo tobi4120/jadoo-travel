@@ -1,0 +1,14 @@
+@mixin category-sub-header {
+    color: #5E6282;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+@mixin category-header {
+    font-family: 'Volkhov', serif;
+    color: #14183E;
+    font-size: 2.2rem;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}

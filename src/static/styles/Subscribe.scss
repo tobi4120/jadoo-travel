@@ -1,0 +1,122 @@
+.subscribe {
+    position: relative;
+    padding: 50px 75px;
+    background-color: #f8f7fe;
+    border-radius: 75px 10px 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header {
+        color: #5E6282;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .email {
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        align-items: stretch;
+        z-index: 1; 
+
+        .email-input {
+            flex: 0.8;
+            position: relative;
+
+            input {
+                border-radius: 10px;
+                border: none;
+                font-family: "Poppins", sans-serif;
+                color: #5E6282;
+                padding: 20px 20px 20px 50px;
+                width: 100%;
+            }
+
+            .mail-icon {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #5E6282;
+            }
+        }
+
+        .subscribe-btn {
+            flex: 0.2;
+            font-family: "Poppins", sans-serif;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #ff9673, #fb7860);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+            }
+
+            &:active {
+                transform: translateY(3px);
+            }
+        }
+    }
+
+    .spiralLeft {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        left: -25px;
+    }
+    
+    .spiralRight {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+    
+    .sendLogo {
+        position: absolute;
+        width: 3.5rem;
+        top: -20px;
+        right: -20px;
+    }
+
+    @media(max-width: 1000px) {
+        .spiralLeft, .spiralRight {
+            display: none;
+        }
+
+        .header {
+            font-size: 1.4rem;
+        }
+
+        .email {
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 650px) {
+        padding: 50px 40px;
+    }
+
+    @media(max-width: 450px) {
+        .email {
+            display: block;
+        }
+
+        .subscribe-btn {
+            margin-top: 20px;
+            padding: 15px;
+            width: 100%;
+        }
+    }
+}
