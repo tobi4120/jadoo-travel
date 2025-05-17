@@ -31,28 +31,53 @@
         }
 
         .enjoy {
-            position: relative;
+            // position: relative;
 
-            p {
-                display: inline;
-                z-index: 2;
-                position: relative; // For z-index to apply position needs to be anything other than static
+            // p {
+            //     display: inline;
+            //     z-index: 2;
+            //     position: relative; // For z-index to apply, position needs to be anything other than static
+            // }
+
+            background-image: url('../underline.png'); 
+            background-repeat: no-repeat;
+            background-position: 20% 86%;
+            background-size: contain; 
+            background-size: 120% 10px;
+
+            @media(max-width:907px) {
+                background-size: 120% 6px;
+                background-position: 20% 84%;
             }
         }
 
-        .underline {
-            position: absolute;
-            width: 280px;
-            top: 57px;
-            right: -90px;
-            z-index: 1;
+        // .underline {
+        //     position: absolute;
+        //     width: 280px;
+        //     top: 57px;
+        //     right: -90px;
+        //     z-index: 1;
 
-            @media (max-width: 907px) { 
-                top: 38px;
-                width: 170px;
-                right: -50px;
-            }
-        }
+        //     @media (max-width: 907px) { 
+        //         top: 38px;
+        //         width: 170px;
+        //         right: -50px;
+        //     }
+        // }
+
+        //         .enjoy-wrapper {
+        //   display: inline-block;
+        //   position: relative;
+        // }
+
+        // .underline {
+        //   position: absolute;
+        //   left: 0;
+        //   bottom: 0;
+        //   width: 100%;
+        //   height: auto;
+        //   pointer-events: none;
+        // }
 
         .more-info {
             color: #5E6282;

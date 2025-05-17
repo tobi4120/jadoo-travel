@@ -9,8 +9,17 @@ function Hero() {
             {/* Left */}
             <div className='desc'>
                 <h2 className='sub-header'>Best Destinations around the world</h2>
-                <h1 className='main-header'>
-                    Travel, <span className='enjoy'><p>enjoy</p><img className='underline' src={underline} /></span> and live a new and full life
+                {/* <h1 className="main-header">
+                    Travel, 
+                    <span className="enjoy-wrapper">
+                        <span className="enjoy"> enjoy</span>
+                        <img className="underline" src={underline} alt="underline" />
+                    </span> and live a new and full life
+                </h1> */}
+                <h1 className="main-header">
+                    Travel, 
+                    <span className="enjoy"> enjoy </span> 
+                    and live a new and full life
                 </h1>
                 <p className='more-info'>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
                 
