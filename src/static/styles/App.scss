@@ -13,9 +13,9 @@
     url("../Decore.png") top right no-repeat;
     background-size: 42%;
     
-    max-width: 90rem;
+    max-width: 100rem;
 
-    @media(min-width: 91rem) {
+    @media(min-width: 101rem) {
         -webkit-mask-image: linear-gradient(to left, transparent, black 10%);
         mask-image: linear-gradient(to left, transparent, black 10%);
         mask-mode: match-source;
